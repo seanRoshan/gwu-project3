@@ -34,7 +34,13 @@ const startApolloServer = async () => {
   );
 
   if (process.env.NODE_ENV === "production") {
+    console.log("Production mode enabled");
+    console.log(`__dirname: ${__dirname}`);
+    console.log(
+      `clientBuildPath: ${path.join(__dirname, "..", "client", "dist")}`
+    );
     const clientBuildPath = path.join(__dirname, "..", "client", "dist");
+    console.log(`clientBuildPath: ${clientBuildPath}`);
 
     app.use(express.static(clientBuildPath));
 
