@@ -39,7 +39,7 @@ const startApolloServer = async () => {
     console.log(
       `clientBuildPath: ${path.join(__dirname, "..", "..", "client", "dist")}`
     );
-    const clientBuildPath = path.join(__dirname, "..", "client", "dist");
+    const clientBuildPath = path.join(__dirname, "..", "..", "client", "dist");
     console.log(`clientBuildPath: ${clientBuildPath}`);
 
     app.use(express.static(clientBuildPath));
